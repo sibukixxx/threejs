@@ -75,6 +75,27 @@ npm run dev
 npm run build
 ```
 
+### Admin System (管理システム)
+
+シーン管理、認証、セキュリティ機能を提供する管理システムを搭載。
+
+```bash
+# Admin server起動
+npm run dev:admin
+
+# Admin UI
+# ブラウザで admin/client/index.html を開く
+```
+
+**主な機能**:
+- 🔐 JWT認証
+- 🛡️ IP whitelist
+- 🎨 Modern glassmorphism UI
+- 📊 リアルタイムシステム統計
+- 🎬 シーン有効化/無効化
+
+詳細は [Admin System Documentation](docs/ADMIN_SYSTEM.md) を参照。
+
 ## 🏗️ プロジェクト構造
 
 ```
