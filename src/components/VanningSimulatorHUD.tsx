@@ -11,13 +11,19 @@ import { useVanningStore } from '../store/vanningStore'
  */
 export function VanningSimulatorHUD() {
   const {
-    count,
-    volumeUtilization,
-    centerOfGravity,
-    currentAlgorithm,
-    containerType,
-    cargoType,
+    loadingStats,
+    algorithm,
+    containerPreset,
+    cargoPreset,
   } = useVanningStore()
+
+  // loadingStatsから値を取得（nullの場合はデフォルト値を使用）
+  const count = loadingStats?.count ?? 0
+  const volumeUtilization = loadingStats?.volumeUtilization ?? 0
+  const centerOfGravity = loadingStats?.centerOfGravity ?? null
+  const currentAlgorithm = algorithm
+  const containerType = containerPreset
+  const cargoType = cargoPreset
 
   // 容積利用率に基づいてステータスを決定
   const getUtilizationStatus = (util: number) => {
