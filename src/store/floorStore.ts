@@ -1,5 +1,5 @@
 import { create } from 'zustand'
-import type { TableData, TableStatus, TableType } from '../utils/FloorManager'
+import type { TableData } from '../utils/FloorManager'
 
 interface FloorState {
   // 設定

@@ -293,12 +293,10 @@ export function setupFloorGUI(manager: FloorManager) {
   startSimulation()
 
   // 速度変更時にシミュレーションを再起動
-  const originalOnChange = simFolder.controllers.find((c) => c.property === 'simulationSpeed')?.onChange
   simFolder.controllers
     .find((c) => c.property === 'simulationSpeed')
     ?.onChange(() => {
       startSimulation()
-      if (originalOnChange) originalOnChange()
     })
 
   return { params, gui, updateStats, stopSimulation: () => {
